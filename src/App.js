@@ -5,11 +5,11 @@ import About from './routes/About';
 import Detail from './routes/Detail';
 import Home from './routes/Home';
 import './styles/App.css';
-// import 확인 잘하기
+
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter  basename={process.env.PUBLIC_URL}>
       <Navigation />
       <Routes>
         <Route path="/" element={<Home/>}/>
