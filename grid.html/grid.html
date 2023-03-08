@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid</title>
+  <style>
+    .grid-container{display: grid;grid-template-rows: 70px 200px 70px;grid-template-columns: repeat(3,1fr);grid-gap:10px;width: 600px;}
+    /* 1fr => 동일한 크기 | fractional unit 사용가능한 공간에 대한 비율 | 가로 값이 없으면 늘어남*/
+    /* grid-row-gap, grid-column-gap */
+    .grid_item{background: #0169ff;color: #fff;display: flex;justify-content: center;align-items: center;}
+    .header{grid-column: 1 / -1;grid-row: 1/2 ;}
+    /* 1/2는 약식이고  grid-column-start:1, grid-column-end:4; */
+    /* 열이 3개가 합쳐지 모양 | 경계선 1,2,3,4  | 경계선 번호 처음 (1)부터 끝(-1)까지영역을 차지하세요.*/
+    .nav{grid-column: 1/2;grid-row: 2/3;}
+    .main{grid-column: 2/3;grid-row:2/3;}
+    .asid{grid-column: 3/4;grid-row: 2/3;}
+    .footer{grid-column: 1/-1;grid-row: 3/-1;}
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid_item header">Header</div>
+    <div class="grid_item nav">Nav</div>
+    <div class="grid_item main">Main Content</div>
+    <div class="grid_item asid">aside</div>
+    <div class="grid_item footer">Footer</div>
+  </div>
+</body>
+</html>
