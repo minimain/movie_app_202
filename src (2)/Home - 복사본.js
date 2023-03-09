@@ -24,6 +24,7 @@ export class Home extends Component {
 
 //  -----------------------------------------
 
+
 state = {
   isLoading: true,
   movies: [],
